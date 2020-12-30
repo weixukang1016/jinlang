@@ -7,15 +7,17 @@ public class CollectRecord {
 
     private String sn;
 
+    private Date collectTime;
+
+    private Integer isRealtime;
+
     private String collectorVer;
 
-    private Short collectorType;
+    private Integer collectorType;
 
-    private Short rssiLevel;
+    private Integer rssiLevel;
 
-    private Short rssi;
-
-    private Date collectTime;
+    private Integer rssi;
 
     private Date createTime;
 
@@ -35,6 +37,22 @@ public class CollectRecord {
         this.sn = sn;
     }
 
+    public Date getCollectTime() {
+        return collectTime;
+    }
+
+    public void setCollectTime(Date collectTime) {
+        this.collectTime = collectTime;
+    }
+
+    public Integer getIsRealtime() {
+        return isRealtime;
+    }
+
+    public void setIsRealtime(Integer isRealtime) {
+        this.isRealtime = isRealtime;
+    }
+
     public String getCollectorVer() {
         return collectorVer;
     }
@@ -43,36 +61,28 @@ public class CollectRecord {
         this.collectorVer = collectorVer;
     }
 
-    public Short getCollectorType() {
+    public Integer getCollectorType() {
         return collectorType;
     }
 
-    public void setCollectorType(Short collectorType) {
+    public void setCollectorType(Integer collectorType) {
         this.collectorType = collectorType;
     }
 
-    public Short getRssiLevel() {
+    public Integer getRssiLevel() {
         return rssiLevel;
     }
 
-    public void setRssiLevel(Short rssiLevel) {
+    public void setRssiLevel(Integer rssiLevel) {
         this.rssiLevel = rssiLevel;
     }
 
-    public Short getRssi() {
+    public Integer getRssi() {
         return rssi;
     }
 
-    public void setRssi(Short rssi) {
+    public void setRssi(Integer rssi) {
         this.rssi = rssi;
-    }
-
-    public Date getCollectTime() {
-        return collectTime;
-    }
-
-    public void setCollectTime(Date collectTime) {
-        this.collectTime = collectTime;
     }
 
     public Date getCreateTime() {

@@ -1,8 +1,9 @@
 package com.pvsoul.datacollection.jinlang.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.pvsoul.datacollection.jinlang.entity.InverterAcData;
 
-public interface InverterAcDataMapper {
+public interface InverterAcDataMapper extends BaseMapper<InverterAcData> {
     int deleteByPrimaryKey(Object id);
 
     int insert(InverterAcData record);

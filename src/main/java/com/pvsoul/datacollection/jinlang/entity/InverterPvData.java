@@ -7,7 +7,7 @@ public class InverterPvData {
 
     private Object collectRecordId;
 
-    private Integer inverterDataId;
+    private Object inverterDataId;
 
     private Integer u;
 
@@ -31,11 +31,11 @@ public class InverterPvData {
         this.collectRecordId = collectRecordId;
     }
 
-    public Integer getInverterDataId() {
+    public Object getInverterDataId() {
         return inverterDataId;
     }
 
-    public void setInverterDataId(Integer inverterDataId) {
+    public void setInverterDataId(Object inverterDataId) {
         this.inverterDataId = inverterDataId;
     }
 

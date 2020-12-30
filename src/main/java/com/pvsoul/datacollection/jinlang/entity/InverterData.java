@@ -19,11 +19,11 @@ public class InverterData {
 
     private Integer eMonth;
 
-    private Long eYear;
+    private Integer eYear;
 
-    private Long eTotal;
+    private Integer eTotal;
 
-    private Short inverterTemp;
+    private Integer inverterTemp;
 
     private String state;
 
@@ -31,7 +31,7 @@ public class InverterData {
 
     private String alarmEn;
 
-    private Short fac;
+    private Integer fac;
 
     private Integer pac;
 
@@ -105,27 +105,27 @@ public class InverterData {
         this.eMonth = eMonth;
     }
 
-    public Long geteYear() {
+    public Integer geteYear() {
         return eYear;
     }
 
-    public void seteYear(Long eYear) {
+    public void seteYear(Integer eYear) {
         this.eYear = eYear;
     }
 
-    public Long geteTotal() {
+    public Integer geteTotal() {
         return eTotal;
     }
 
-    public void seteTotal(Long eTotal) {
+    public void seteTotal(Integer eTotal) {
         this.eTotal = eTotal;
     }
 
-    public Short getInverterTemp() {
+    public Integer getInverterTemp() {
         return inverterTemp;
     }
 
-    public void setInverterTemp(Short inverterTemp) {
+    public void setInverterTemp(Integer inverterTemp) {
         this.inverterTemp = inverterTemp;
     }
 
@@ -153,11 +153,11 @@ public class InverterData {
         this.alarmEn = alarmEn;
     }
 
-    public Short getFac() {
+    public Integer getFac() {
         return fac;
     }
 
-    public void setFac(Short fac) {
+    public void setFac(Integer fac) {
         this.fac = fac;
     }
 

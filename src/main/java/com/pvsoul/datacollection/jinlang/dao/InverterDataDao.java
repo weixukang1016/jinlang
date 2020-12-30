@@ -85,7 +85,7 @@ public class InverterDataDao implements Serializable {
 
     //国家标准代码
     @JsonProperty("national_code")
-    private String nationalCode;
+    private int nationalCode;
 
     //国家标准
     @JsonProperty("national")
