@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.pvsoul.datacollection.jinlang.mapper.collect_recordMapper">
-  <resultMap id="BaseResultMap" type="com.pvsoul.datacollection.jinlang.entity.collect_record">
+<mapper namespace="com.pvsoul.datacollection.jinlang.mapper.CollectRecordMapper">
+  <resultMap id="BaseResultMap" type="com.pvsoul.datacollection.jinlang.entity.CollectRecord">
     <id column="id" jdbcType="OTHER" property="id" />
     <result column="sn" jdbcType="VARCHAR" property="sn" />
     <result column="collector_ver" jdbcType="VARCHAR" property="collectorVer" />
@@ -24,7 +24,7 @@
     delete from collect_record
     where id = #{id,jdbcType=OTHER}
   </delete>
-  <insert id="insert" parameterType="com.pvsoul.datacollection.jinlang.entity.collect_record">
+  <insert id="insert" parameterType="com.pvsoul.datacollection.jinlang.entity.CollectRecord">
     insert into collect_record (id, sn, collector_ver, 
       collector_type, rssi_level, rssi, 
       collect_time, create_time)
@@ -32,7 +32,7 @@
       #{collectorType,jdbcType=SMALLINT}, #{rssiLevel,jdbcType=SMALLINT}, #{rssi,jdbcType=SMALLINT}, 
       #{collectTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.pvsoul.datacollection.jinlang.entity.collect_record">
+  <insert id="insertSelective" parameterType="com.pvsoul.datacollection.jinlang.entity.CollectRecord">
     insert into collect_record
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -87,7 +87,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.pvsoul.datacollection.jinlang.entity.collect_record">
+  <update id="updateByPrimaryKeySelective" parameterType="com.pvsoul.datacollection.jinlang.entity.CollectRecord">
     update collect_record
     <set>
       <if test="sn != null">
@@ -114,7 +114,7 @@
     </set>
     where id = #{id,jdbcType=OTHER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.pvsoul.datacollection.jinlang.entity.collect_record">
+  <update id="updateByPrimaryKey" parameterType="com.pvsoul.datacollection.jinlang.entity.CollectRecord">
     update collect_record
     set sn = #{sn,jdbcType=VARCHAR},
       collector_ver = #{collectorVer,jdbcType=VARCHAR},

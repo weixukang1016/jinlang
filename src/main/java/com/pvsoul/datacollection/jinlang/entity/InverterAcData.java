@@ -2,7 +2,7 @@ package com.pvsoul.datacollection.jinlang.entity;
 
 import java.util.Date;
 
-public class inverter_pv_data {
+public class InverterAcData {
     private Object id;
 
     private Object collectRecordId;

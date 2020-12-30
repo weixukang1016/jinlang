@@ -33,25 +33,25 @@
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
-        <table tableName='collect_record' domainObjectName="collect_record"
+        <table tableName='collect_record' domainObjectName="CollectRecord"
                delimitIdentifiers="false" delimitAllColumns="false"
                enableSelectByExample="false" enableDeleteByExample="false"
                enableCountByExample="false" selectByExampleQueryId="false"
                enableUpdateByExample="false">
         </table>
-        <table tableName='inverter_data' domainObjectName="inverter_data"
+        <table tableName='inverter_data' domainObjectName="InverterData"
                delimitIdentifiers="false" delimitAllColumns="false"
                enableSelectByExample="false" enableDeleteByExample="false"
                enableCountByExample="false" selectByExampleQueryId="false"
                enableUpdateByExample="false">
         </table>
-        <table tableName='inverter_pv_data' domainObjectName="inverter_pv_data"
+        <table tableName='inverter_pv_data' domainObjectName="InverterPvData"
                delimitIdentifiers="false" delimitAllColumns="false"
                enableSelectByExample="false" enableDeleteByExample="false"
                enableCountByExample="false" selectByExampleQueryId="false"
                enableUpdateByExample="false">
         </table>
-        <table tableName='inverter_ac_data' domainObjectName="inverter_ac_data"
+        <table tableName='inverter_ac_data' domainObjectName="InverterAcData"
                delimitIdentifiers="false" delimitAllColumns="false"
                enableSelectByExample="false" enableDeleteByExample="false"
                enableCountByExample="false" selectByExampleQueryId="false"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.pvsoul.datacollection.jinlang.mapper.inverter_ac_dataMapper">
-  <resultMap id="BaseResultMap" type="com.pvsoul.datacollection.jinlang.entity.inverter_ac_data">
+<mapper namespace="com.pvsoul.datacollection.jinlang.mapper.InverterAcDataMapper">
+  <resultMap id="BaseResultMap" type="com.pvsoul.datacollection.jinlang.entity.InverterAcData">
     <id column="id" jdbcType="OTHER" property="id" />
     <result column="collect_record_id" jdbcType="OTHER" property="collectRecordId" />
     <result column="inverter_data_id" jdbcType="INTEGER" property="inverterDataId" />
@@ -22,13 +22,13 @@
     delete from inverter_ac_data
     where id = #{id,jdbcType=OTHER}
   </delete>
-  <insert id="insert" parameterType="com.pvsoul.datacollection.jinlang.entity.inverter_ac_data">
+  <insert id="insert" parameterType="com.pvsoul.datacollection.jinlang.entity.InverterAcData">
     insert into inverter_ac_data (id, collect_record_id, inverter_data_id, 
       u, i, create_time)
     values (#{id,jdbcType=OTHER}, #{collectRecordId,jdbcType=OTHER}, #{inverterDataId,jdbcType=INTEGER}, 
       #{u,jdbcType=INTEGER}, #{i,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.pvsoul.datacollection.jinlang.entity.inverter_ac_data">
+  <insert id="insertSelective" parameterType="com.pvsoul.datacollection.jinlang.entity.InverterAcData">
     insert into inverter_ac_data
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -71,7 +71,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.pvsoul.datacollection.jinlang.entity.inverter_ac_data">
+  <update id="updateByPrimaryKeySelective" parameterType="com.pvsoul.datacollection.jinlang.entity.InverterAcData">
     update inverter_ac_data
     <set>
       <if test="collectRecordId != null">
@@ -92,7 +92,7 @@
     </set>
     where id = #{id,jdbcType=OTHER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.pvsoul.datacollection.jinlang.entity.inverter_ac_data">
+  <update id="updateByPrimaryKey" parameterType="com.pvsoul.datacollection.jinlang.entity.InverterAcData">
     update inverter_ac_data
     set collect_record_id = #{collectRecordId,jdbcType=OTHER},
       inverter_data_id = #{inverterDataId,jdbcType=INTEGER},

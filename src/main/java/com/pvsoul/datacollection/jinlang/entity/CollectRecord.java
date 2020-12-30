@@ -2,7 +2,7 @@ package com.pvsoul.datacollection.jinlang.entity;
 
 import java.util.Date;
 
-public class collect_record {
+public class CollectRecord {
     private Object id;
 
     private String sn;
