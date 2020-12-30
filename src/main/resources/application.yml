@@ -1,0 +1,26 @@
+spring:
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      indent-output: true
+    date-format: yyyy-MM-dd HH:mm:ss
+    parser:
+      allow-missing-values: true
+  jersey:
+    application-path: /
+    resource-package: com.pvsoul.datacollection.jinlang.resource
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    #url: jdbc:postgresql://139.9.113.221:5432/yuandong?stringtype=unspecified
+    url: jdbc:postgresql://192.168.51.5:5432/yuandong?stringtype=unspecified
+    username: pvuser
+    password: Pvsu1125
+mybatis-plus:
+  type-aliases-package: com.pvsoul.datacollection.jinlang.entity
+  mapper-locations: classpath*:/mapper/**/*.xml
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%X{x-request-id}] %-5level %logger{50} - %msg%n'
+  level:
+    root: info
+
