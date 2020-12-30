@@ -14,8 +14,8 @@ spring:
     #resource-package: com.pvsoul.datacollection.jinlang.resource
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://139.9.113.221:5432/yuandong?stringtype=unspecified
-    #url: jdbc:postgresql://192.168.51.5:5432/yuandong?stringtype=unspecified
+    #url: jdbc:postgresql://139.9.113.221:5432/yuandong?stringtype=unspecified
+    url: jdbc:postgresql://192.168.51.5:5432/yuandong?stringtype=unspecified
     username: pvuser
     password: Pvsu1125
     hikari:
@@ -33,5 +33,5 @@ logging:
     console: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%X{x-request-id}] %-5level %logger{50} - %msg%n'
   level:
     root: info
-    com.chz.mapper: debug
+    #com.chz.mapper: debug
 
