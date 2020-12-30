@@ -9,7 +9,7 @@
         </commentGenerator>
 
         <jdbcConnection
-                connectionURL="jdbc:postgresql://139.9.113.221/test?stringtype=unspecified"
+                connectionURL="jdbc:postgresql://139.9.113.221/yuandong?stringtype=unspecified"
                 driverClass="org.postgresql.Driver" password="Pvsu1125"
                 userId="pvuser" />
 
@@ -33,19 +33,29 @@
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
-        <table tableName='test' domainObjectName="Test"
+        <table tableName='collect_record' domainObjectName="collect_record"
                delimitIdentifiers="false" delimitAllColumns="false"
                enableSelectByExample="false" enableDeleteByExample="false"
                enableCountByExample="false" selectByExampleQueryId="false"
                enableUpdateByExample="false">
         </table>
-<!--
-        <table tableName='eos_flow' domainObjectName="EosFlow"
+        <table tableName='inverter_data' domainObjectName="inverter_data"
                delimitIdentifiers="false" delimitAllColumns="false"
                enableSelectByExample="false" enableDeleteByExample="false"
                enableCountByExample="false" selectByExampleQueryId="false"
                enableUpdateByExample="false">
         </table>
--->
+        <table tableName='inverter_pv_data' domainObjectName="inverter_pv_data"
+               delimitIdentifiers="false" delimitAllColumns="false"
+               enableSelectByExample="false" enableDeleteByExample="false"
+               enableCountByExample="false" selectByExampleQueryId="false"
+               enableUpdateByExample="false">
+        </table>
+        <table tableName='inverter_ac_data' domainObjectName="inverter_ac_data"
+               delimitIdentifiers="false" delimitAllColumns="false"
+               enableSelectByExample="false" enableDeleteByExample="false"
+               enableCountByExample="false" selectByExampleQueryId="false"
+               enableUpdateByExample="false">
+        </table>
     </context>
 </generatorConfiguration>
