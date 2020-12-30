@@ -15,8 +15,8 @@ public class JerseyConfig implements ResourceConfigCustomizer {
 
     @Override
     public void customize(ResourceConfig config) {
-        config.packages("com.pvsoul.datacollection.jinlang.resource");
-        //config.register(com.pvsoul.datacollection.jinlang.resource.DataReceive.class);
+        //config.packages("com.pvsoul.datacollection.jinlang.resource");
+        config.register(com.pvsoul.datacollection.jinlang.resource.DataReceiveResource.class);
         //config.registerClasses(ValidationExceptionProvider.class);
         //config.registerClasses(EosExceptionProvider.class);
     }
