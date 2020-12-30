@@ -1,3 +1,6 @@
+name: jinlang
+server:
+  port: 8080
 spring:
   jackson:
     default-property-inclusion: non_null
