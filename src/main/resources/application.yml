@@ -11,7 +11,7 @@ spring:
       allow-missing-values: true
   jersey:
     application-path: /
-    resource-package: com.pvsoul.datacollection.jinlang.resource
+    #resource-package: com.pvsoul.datacollection.jinlang.resource
   datasource:
     driver-class-name: org.postgresql.Driver
     #url: jdbc:postgresql://139.9.113.221:5432/yuandong?stringtype=unspecified
