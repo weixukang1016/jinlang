@@ -1,8 +1,10 @@
 package com.pvsoul.datacollection.jinlang.resource;
 
+//import com.alibaba.fastjson.JSONObject;
 import com.pvsoul.datacollection.jinlang.dao.JinLangDataDao;
 import com.pvsoul.datacollection.jinlang.dao.ResultDao;
 import com.pvsoul.datacollection.jinlang.service.DataReceiveService;
+import com.pvsoul.datacollection.jinlang.util.JinlangAuth;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -32,13 +34,29 @@ public class DataReceiveResource {
     @Path("/pushdata")
     //@ApiOperation("接收锦浪云平台推送数据")
     public Response pushData(@Context HttpServletRequest request, JinLangDataDao data) {
-        Enumeration<String> headerNames = request.getHeaderNames();
-        while (headerNames.hasMoreElements()) {
-            String headerName = headerNames.nextElement();
-            log.info(headerName + ":" + request.getHeader(headerName));
+        String verb = request.getMethod();
+        String contentType = request.getHeader("content-type");
+        String date = request.getHeader("date");
+        String canonicalizedResource = request.getRequestURI();
+        String authorization = request.getHeader("authorization");
+        boolean isAuth = JinlangAuth.checkAuth(verb, contentType, date, canonicalizedResource, authorization);
+        ResultDao resultDao;
+        if (isAuth) {
+            log.info(data.toString());
+            resultDao = dataReceiveService.SaveData(data);
+        } else {
+            log.info("Jinlang Authorization is wrong");
+            log.info("verb:" + verb);
+            log.info("contentType:" + contentType);
+            log.info("date:" + date);
+            log.info("canonicalizedResource:" + canonicalizedResource);
+            log.info("authorization:" + authorization);
+            log.info("RemoteHost:" + request.getRemoteHost());
+            resultDao = new ResultDao();
+            resultDao.setSuccess(false);
+            resultDao.setCode(String.valueOf(Response.Status.UNAUTHORIZED.getStatusCode()));
+            resultDao.setMsg("Jinlang Authorization is wrong");
         }
-        log.info(data.toString());
-        ResultDao resultDao = dataReceiveService.SaveData(data);
         return Response.status(Response.Status.OK).entity(resultDao).build();
     }
 

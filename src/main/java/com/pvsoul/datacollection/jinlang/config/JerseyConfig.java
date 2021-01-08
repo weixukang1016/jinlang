@@ -1,5 +1,7 @@
 package com.pvsoul.datacollection.jinlang.config;
 
+import com.pvsoul.datacollection.jinlang.provider.RuntimeExceptionProvider;
+import com.pvsoul.datacollection.jinlang.provider.ValidationExceptionProvider;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import org.springframework.boot.autoconfigure.jersey.ResourceConfigCustomizer;
@@ -17,7 +19,7 @@ public class JerseyConfig implements ResourceConfigCustomizer {
     public void customize(ResourceConfig config) {
         //config.packages("com.pvsoul.datacollection.jinlang.resource");
         config.register(com.pvsoul.datacollection.jinlang.resource.DataReceiveResource.class);
-        //config.registerClasses(ValidationExceptionProvider.class);
-        //config.registerClasses(EosExceptionProvider.class);
+        config.registerClasses(ValidationExceptionProvider.class);
+        config.registerClasses(RuntimeExceptionProvider.class);
     }
 }
