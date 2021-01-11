@@ -11,19 +11,19 @@ public class InverterData {
 
     private String inverterModel;
 
-    private Integer ratedPower;
+    private Float ratedPower;
 
     private String inverterVer;
 
-    private Integer eToday;
+    private Float eToday;
 
-    private Integer eMonth;
+    private Float eMonth;
 
-    private Integer eYear;
+    private Float eYear;
 
-    private Integer eTotal;
+    private Float eTotal;
 
-    private Integer inverterTemp;
+    private Float inverterTemp;
 
     private String state;
 
@@ -31,9 +31,9 @@ public class InverterData {
 
     private String alarmEn;
 
-    private Integer fac;
+    private Float fac;
 
-    private Integer pac;
+    private Float pac;
 
     private Integer nationalCode;
 
@@ -73,11 +73,11 @@ public class InverterData {
         this.inverterModel = inverterModel;
     }
 
-    public Integer getRatedPower() {
+    public Float getRatedPower() {
         return ratedPower;
     }
 
-    public void setRatedPower(Integer ratedPower) {
+    public void setRatedPower(Float ratedPower) {
         this.ratedPower = ratedPower;
     }
 
@@ -89,43 +89,43 @@ public class InverterData {
         this.inverterVer = inverterVer;
     }
 
-    public Integer geteToday() {
+    public Float geteToday() {
         return eToday;
     }
 
-    public void seteToday(Integer eToday) {
+    public void seteToday(Float eToday) {
         this.eToday = eToday;
     }
 
-    public Integer geteMonth() {
+    public Float geteMonth() {
         return eMonth;
     }
 
-    public void seteMonth(Integer eMonth) {
+    public void seteMonth(Float eMonth) {
         this.eMonth = eMonth;
     }
 
-    public Integer geteYear() {
+    public Float geteYear() {
         return eYear;
     }
 
-    public void seteYear(Integer eYear) {
+    public void seteYear(Float eYear) {
         this.eYear = eYear;
     }
 
-    public Integer geteTotal() {
+    public Float geteTotal() {
         return eTotal;
     }
 
-    public void seteTotal(Integer eTotal) {
+    public void seteTotal(Float eTotal) {
         this.eTotal = eTotal;
     }
 
-    public Integer getInverterTemp() {
+    public Float getInverterTemp() {
         return inverterTemp;
     }
 
-    public void setInverterTemp(Integer inverterTemp) {
+    public void setInverterTemp(Float inverterTemp) {
         this.inverterTemp = inverterTemp;
     }
 
@@ -153,19 +153,19 @@ public class InverterData {
         this.alarmEn = alarmEn;
     }
 
-    public Integer getFac() {
+    public Float getFac() {
         return fac;
     }
 
-    public void setFac(Integer fac) {
+    public void setFac(Float fac) {
         this.fac = fac;
     }
 
-    public Integer getPac() {
+    public Float getPac() {
         return pac;
     }
 
-    public void setPac(Integer pac) {
+    public void setPac(Float pac) {
         this.pac = pac;
     }
 

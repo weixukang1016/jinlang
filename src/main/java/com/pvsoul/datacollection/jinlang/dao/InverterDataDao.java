@@ -29,7 +29,7 @@ public class InverterDataDao implements Serializable {
 
     //逆变器容量,单位kWp
     @JsonProperty("rated_power")
-    private int ratedPower;
+    private float ratedPower;
 
     //逆变器版本
     @JsonProperty("inverter_ver")
@@ -37,19 +37,19 @@ public class InverterDataDao implements Serializable {
 
     //当日电量,单位kWh
     @JsonProperty("e_today")
-    private int eToday;
+    private float eToday;
 
     //当月电量,单位kWh
     @JsonProperty("e_month")
-    private int eMonth;
+    private float eMonth;
 
     //当年电量,单位kWh
     @JsonProperty("e_year")
-    private int eYear;
+    private float eYear;
 
     //累计电量,单位kWh
     @JsonProperty("e_total")
-    private int eTotal;
+    private float eTotal;
 
     //直流
     @JsonProperty("pv")
@@ -57,7 +57,7 @@ public class InverterDataDao implements Serializable {
 
     //逆变器温度,单位 ℃
     @JsonProperty("inverter_temp")
-    private int inverterTemp;
+    private float inverterTemp;
 
     //逆变器状态
     @JsonProperty("state")
@@ -77,11 +77,11 @@ public class InverterDataDao implements Serializable {
 
     //交流频率，单位 Hz
     @JsonProperty("fac")
-    private int fac;
+    private float fac;
 
     //逆变器功率，单位 W
     @JsonProperty("pac")
-    private int pac;
+    private float pac;
 
     //国家标准代码
     @JsonProperty("national_code")

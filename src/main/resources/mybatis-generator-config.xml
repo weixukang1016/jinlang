@@ -9,7 +9,7 @@
         </commentGenerator>
 
         <jdbcConnection
-                connectionURL="jdbc:postgresql://139.9.113.221/yuandong?stringtype=unspecified"
+                connectionURL="jdbc:postgresql://139.9.113.221/test?stringtype=unspecified"
                 driverClass="org.postgresql.Driver" password="Pvsu1125"
                 userId="pvuser" />
 

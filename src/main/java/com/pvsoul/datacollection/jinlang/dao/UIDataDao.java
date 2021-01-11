@@ -20,10 +20,10 @@ public class UIDataDao implements Serializable {
 
     //电压,单位 V
     @JsonProperty("u")
-    private int u;
+    private float u;
 
     //电流,单位 A
     @JsonProperty("i")
-    private int i;
+    private float i;
 
 }

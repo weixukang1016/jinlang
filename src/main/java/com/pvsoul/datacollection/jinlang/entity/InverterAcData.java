@@ -9,9 +9,9 @@ public class InverterAcData {
 
     private Object inverterDataId;
 
-    private Integer u;
+    private Float u;
 
-    private Integer i;
+    private Float i;
 
     private Date createTime;
 
@@ -39,19 +39,19 @@ public class InverterAcData {
         this.inverterDataId = inverterDataId;
     }
 
-    public Integer getU() {
+    public Float getU() {
         return u;
     }
 
-    public void setU(Integer u) {
+    public void setU(Float u) {
         this.u = u;
     }
 
-    public Integer getI() {
+    public Float getI() {
         return i;
     }
 
-    public void setI(Integer i) {
+    public void setI(Float i) {
         this.i = i;
     }
 
