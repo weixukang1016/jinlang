@@ -40,7 +40,7 @@ public class JinlangAuth {
         signTime.setTime(sdf.parse(date));
         //数据签名时间超过系统时间正负15分钟的认为无效
         if (signTime.before(before15Min) || signTime.after(after15Min)) {
-            return false;
+            //return false;
         }
 
         String data = verb + "\n" + contentType + "\n" + date + "\n" + canonicalizedResource;
