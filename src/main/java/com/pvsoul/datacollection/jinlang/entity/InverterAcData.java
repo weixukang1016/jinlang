@@ -15,6 +15,8 @@ public class InverterAcData {
 
     private Date createTime;
 
+    private Integer index;
+
     public Object getId() {
         return id;
     }
@@ -61,5 +63,13 @@ public class InverterAcData {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public Integer getIndex() {
+        return index;
+    }
+
+    public void setIndex(Integer index) {
+        this.index = index;
     }
 }

@@ -83,6 +83,7 @@ public class DataReceiveServiceImpl implements DataReceiveService {
             inverterData.setCreateTime(now);
 
             inverterDataMapper.insert(inverterData);
+            int index = 0;
 
             for (UIDataDao pvUI:inverterDataDao.getPv()) {
                 String inverterPvDataId = UUID.randomUUID().toString();
@@ -93,8 +94,10 @@ public class DataReceiveServiceImpl implements DataReceiveService {
                 inverterPvData.setU(pvUI.getU());
                 inverterPvData.setI(pvUI.getI());
                 inverterPvData.setCreateTime(now);
+                inverterPvData.setIndex(index++);
                 inverterPvDataMapper.insert(inverterPvData);
             }
+            index = 0;
             for (UIDataDao acUI:inverterDataDao.getAc()) {
                 String inverterAcDataId = UUID.randomUUID().toString();
                 InverterAcData inverterAcData = new InverterAcData();
@@ -104,6 +107,7 @@ public class DataReceiveServiceImpl implements DataReceiveService {
                 inverterAcData.setU(acUI.getU());
                 inverterAcData.setI(acUI.getI());
                 inverterAcData.setCreateTime(now);
+                inverterAcData.setIndex(index++);
                 inverterAcDataMapper.insert(inverterAcData);
             }
         }

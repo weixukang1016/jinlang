@@ -17,6 +17,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.text.ParseException;
 import java.util.Enumeration;
 
 //@Api(value = "DataReceiveResource")
@@ -33,7 +34,7 @@ public class DataReceiveResource {
     @POST
     @Path("/pushdata")
     //@ApiOperation("接收锦浪云平台推送数据")
-    public Response pushData(@Context HttpServletRequest request, JinLangDataDao data) {
+    public Response pushData(@Context HttpServletRequest request, JinLangDataDao data) throws ParseException {
         String verb = request.getMethod();
         String contentType = request.getHeader("content-type");
         String date = request.getHeader("date");

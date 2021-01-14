@@ -11,8 +11,9 @@ import org.apache.commons.codec.binary.Base64;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
-import java.text.SimpleDateFormat;
+import java.text.*;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
@@ -28,7 +29,19 @@ public class JinlangAuth {
                                     String contentType,
                                     String date,
                                     String canonicalizedResource,
-                                    String authorization) {
+                                    String authorization) throws ParseException {
+
+        Calendar before15Min = Calendar.getInstance();
+        before15Min.add(Calendar.MINUTE, -15);
+        Calendar after15Min = Calendar.getInstance();
+        before15Min.add(Calendar.MINUTE, 15);
+        SimpleDateFormat sdf = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss 'GMT'", Locale.US);
+        Calendar signTime = Calendar.getInstance();
+        signTime.setTime(sdf.parse(date));
+        //数据签名时间超过系统时间正负15分钟的认为无效
+        if (signTime.before(before15Min) || signTime.after(after15Min)) {
+            return false;
+        }
 
         String data = verb + "\n" + contentType + "\n" + date + "\n" + canonicalizedResource;
         String contentMd5 = getDigest(data);
