@@ -30,19 +30,20 @@ public class JinlangAuth {
                                     String date,
                                     String canonicalizedResource,
                                     String authorization) throws ParseException {
-
-        Calendar before15Min = Calendar.getInstance();
+/*
+        Calendar before15Min = Calendar.getInstance(Locale.US);
         before15Min.add(Calendar.MINUTE, -15);
         Calendar after15Min = Calendar.getInstance();
-        before15Min.add(Calendar.MINUTE, 15);
+        after15Min.add(Calendar.MINUTE, 15);
         SimpleDateFormat sdf = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss 'GMT'", Locale.US);
         Calendar signTime = Calendar.getInstance();
         signTime.setTime(sdf.parse(date));
+        signTime.setTimeZone(TimeZone.getDefault());
         //数据签名时间超过系统时间正负15分钟的认为无效
         if (signTime.before(before15Min) || signTime.after(after15Min)) {
-            //return false;
+            return false;
         }
-
+*/
         String data = verb + "\n" + contentType + "\n" + date + "\n" + canonicalizedResource;
         String contentMd5 = getDigest(data);
         String sign = publicDecrypt(authorization);

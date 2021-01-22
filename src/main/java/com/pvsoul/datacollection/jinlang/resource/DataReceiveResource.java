@@ -1,6 +1,7 @@
 package com.pvsoul.datacollection.jinlang.resource;
 
 //import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONObject;
 import com.pvsoul.datacollection.jinlang.dao.JinLangDataDao;
 import com.pvsoul.datacollection.jinlang.dao.ResultDao;
 import com.pvsoul.datacollection.jinlang.service.DataReceiveService;
@@ -18,7 +19,6 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.text.ParseException;
-import java.util.Enumeration;
 
 //@Api(value = "DataReceiveResource")
 @Path("api/datareceive")
@@ -43,7 +43,7 @@ public class DataReceiveResource {
         boolean isAuth = JinlangAuth.checkAuth(verb, contentType, date, canonicalizedResource, authorization);
         ResultDao resultDao;
         if (isAuth) {
-            log.info(data.toString());
+            log.info(JSONObject.toJSONString(data.toString()));
             resultDao = dataReceiveService.SaveData(data);
         } else {
             log.info("Jinlang Authorization is wrong");
