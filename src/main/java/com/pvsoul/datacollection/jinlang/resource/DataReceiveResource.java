@@ -43,7 +43,7 @@ public class DataReceiveResource {
         boolean isAuth = JinlangAuth.checkAuth(verb, contentType, date, canonicalizedResource, authorization);
         ResultDao resultDao;
         if (isAuth) {
-            log.info(JSONObject.toJSONString(data.toString()));
+            log.info(JSONObject.toJSONString(data));
             resultDao = dataReceiveService.SaveData(data);
         } else {
             log.info("Jinlang Authorization is wrong");
